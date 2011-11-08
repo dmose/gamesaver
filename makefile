@@ -1,6 +1,6 @@
-MONGODIR=/opt/local/bin
+MONGODIR=~/mongodb/bin
 
 db:	
-	$(MONGODIR)/mongod --dbpath /tmp/mongo
+	$(MONGODIR)/mongod
 host:
 	node server/main.js
