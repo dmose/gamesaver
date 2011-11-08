@@ -127,12 +127,7 @@ app.post("/api/login", function (req, res) {
               console.log("assertion verified successfully for email:", email);
             } else {
               console.log("failed to verify assertion:", verifierResp.reason);
-            }     
-            
-            // This is an API server, so we want to allow any client to
-            // make cross-domain calls here. 
-            res.header("Access-Control-Allow-Origin", "*");
-
+            }                
             res.json(email);
           } catch(e) {
             console.log("non-JSON response from verifier");
